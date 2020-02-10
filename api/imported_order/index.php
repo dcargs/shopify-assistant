@@ -14,7 +14,7 @@ switch ($method) {
   case 'GET':
     require_once "order.php";
     $imported_order = new Imported_Order;
-    echo $imported_order->get_order('ALL');
+    var_dump($imported_order->get_order('ALL'));
     break;
   case 'DELETE':
     require_once "order.php";
