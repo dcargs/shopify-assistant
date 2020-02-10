@@ -14,7 +14,14 @@ switch ($method) {
   case 'GET':
     require_once "order.php";
     $imported_order = new Imported_Order;
-    var_dump($imported_order->get_order('ALL'));
+    $data = new stdClass;
+    $data->params = [];
+    $data->params[0]->mysql_type = '%s';
+    $data->params[0]->mysql_column = 'Tracking_Number';
+    $data->params[0]->mysql_param = '1234567';
+
+    // var_dump($imported_order->get_order('ALL'));
+    var_dump($imported_order->get_order($data));
     break;
   case 'DELETE':
     require_once "order.php";

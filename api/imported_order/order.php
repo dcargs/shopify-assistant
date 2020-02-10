@@ -12,8 +12,10 @@ class Imported_Order extends db {
       $stmt->execute();
       $result = $stmt->get_result();
       return $result;
+    } elseif(isset($data['params'])) {
+      return $data['params'];
     } else {
-      echo "how did we get here";
+      return 'not sure what you sent me Imported_Order->get_order($data);';
     }
   }
 }
