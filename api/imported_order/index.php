@@ -15,7 +15,6 @@ switch ($method) {
     require_once "order.php";
     $imported_order = new Imported_Order;
     $data = new stdClass;
-    $data->params = [];
     $data->params->mysql_types = ['%s'];
     $data->params->mysql_columns = ['Tracking_Number'];
     $data->params->mysql_params = ['1234567'];
