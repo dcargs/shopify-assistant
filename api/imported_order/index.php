@@ -16,9 +16,9 @@ switch ($method) {
     $imported_order = new Imported_Order;
     $data = new stdClass;
     $data->params = [];
-    $data->params[0]->mysql_type = '%s';
-    $data->params[0]->mysql_column = 'Tracking_Number';
-    $data->params[0]->mysql_param = '1234567';
+    $data->params->mysql_types = ['%s'];
+    $data->params->mysql_columns = ['Tracking_Number'];
+    $data->params->mysql_params = ['1234567'];
 
     // var_dump($imported_order->get_order('ALL'));
     var_dump($imported_order->get_order($data));
