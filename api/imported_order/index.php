@@ -19,8 +19,8 @@ switch ($method) {
     $data->params->mysql_columns = ['Tracking_Number'];
     $data->params->mysql_params = ['1234567'];
 
-    // var_dump($imported_order->get_order('ALL'));
-    var_dump($imported_order->get_order($data));
+    var_dump($imported_order->get_order('ALL'));
+    // var_dump($imported_order->get_order($data));
     break;
   case 'DELETE':
     require_once "order.php";
