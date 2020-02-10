@@ -13,7 +13,7 @@ class Imported_Order extends db {
       $result = $stmt->get_result();
       return $result;
     } else {
-      // code...
+      echo "how did we get here";
     }
   }
 }
